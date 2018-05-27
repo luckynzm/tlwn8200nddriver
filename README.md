@@ -1,6 +1,6 @@
-# TP-Link WN8200ND V2 drivers for Linux
+# TP-Link WN8200ND V2 driver for Linux
 
-These are the Linux drivers for TP-LINK WN8200ND V2.  After many tries i have managed to get them working
+These are the Linux drivers for TP-LINK WN8200ND V2.  After many tries i finally managed to get it working
 
 # Explanation
 
