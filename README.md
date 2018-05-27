@@ -12,8 +12,8 @@ You will need build-essentials (or base-devel if you are on Arch) or kernel head
    ```shell
    $ git clone https://github.com/luckynzm/tlwn8200nddriver.git
    $ cd tlwn8200nddriver
-   # dkms add .
-   # dkms install rtl8192eu/1.0
+   $ sudo dkms add .
+   $ sudo dkms install rtl8192eu/1.0
    
    This will take some time
    
