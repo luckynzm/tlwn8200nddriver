@@ -1,10 +1,10 @@
 # TP-Link WN8200ND V2 driver for Linux
 
-This is the Linux drivers for TP-LINK WN8200ND V2.  After many tries i finally managed to get it working
+This is the Linux driver for TP-LINK WN8200ND V2.  After many tries i finally managed to get it working
 
 # Explanation
 
-The V2 model of the Wifi adapter uses **RTL8192EU** (unlike the original which uses RTL8192CU). However the drivers that can be found on TP-LINK's site won't compile under Ubuntu 18.04 (or any newer Linux kernel for that matter) But the [rtl8192eu-linux-driver](https://github.com/Mange/rtl8192eu-linux-driver) doesn't recognized the usbid of this card (**2357:0126**) so what i did is i copied **osdep/linux/usb_intf.c** to rtl8192eu-linux-driver and suddenly everything worked
+The V2 model of the Wifi adapter uses **RTL8192EU** (unlike the original which uses RTL8192CU). However the drivers that can be found on TP-LINK's site won't compile under Ubuntu 18.04 (or any newer Linux kernel for that matter) But the [rtl8192eu-linux-driver](https://github.com/Mange/rtl8192eu-linux-driver) doesn't recognize the usbid of this card (**2357:0126**) so what i did is i copied **osdep/linux/usb_intf.c** to rtl8192eu-linux-driver and suddenly everything worked
 
 # Installation
 
@@ -18,7 +18,7 @@ You will need build-essentials (or base-devel if you are on Arch) or kernel head
    This will take some time
    
    # nano /etc/modules
-   Put the 8192eu on the end of the file
+   Put the 8192eu at the end of the file
    # reboot (if you want to).
 
 ```
