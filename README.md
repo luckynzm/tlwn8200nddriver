@@ -16,10 +16,21 @@ You will need build-essentials (or base-devel if you are on Arch) or kernel head
    $ sudo dkms install rtl8192eu/1.0
    
    This will take some time
-   
+```
+# Enabling on Ubuntu and derivatives (like Linux Mint)
+```bash
    # nano /etc/modules
    Put the 8192eu at the end of the file
    # reboot (if you want to).
+
+```
+
+# Enabling on Arch/Manjaro
+```bash
+   # nano /etc/modules-load.d/rtl8192eu.conf
+   Put the 8192eu at the end of the file
+   If that doesn't work try putting rt8192eu instead.
+   # reboot (optional)
 
 ```
 
