@@ -23,6 +23,22 @@ You will need build-essentials (or base-devel if you are on Arch) or kernel head
 
 ```
 
+# Troubleshooting
+Verify that the driver has loaded:
+```bash
+$ lsmod | grep 8192eu
+8192eu               1101824  0
+cfg80211              614400  4 iwlmvm,iwlwifi,mac80211,8192eu
+```
+If the output is empty try:
+```bash
+sudo modprobe 8192eu
+```
+and then verify again.
+
+If `modprobe` fails with `Required key not available` you may have to disable secure boot since you are trying to
+load an unsigned kernel module. Go [here](https://askubuntu.com/questions/762254/why-do-i-get-required-key-not-available-when-install-3rd-party-kernel-modules) for more information.
+
 # Bugs
 The activity LED on the usb adapter doesn't turn on
 The kernel spams alot of messages during startup about the driver
